@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Medico Ecografico Dott. Alberto Tarozzi, Bologna</title>
+<meta name="description" content="Ecografie ed ecocolordoppler a Bologna, in Via Battindarno 8 e a domicilio. Dietologia. Prenotazione online 24 ore su 24.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Studio Medico Ecografico Dott. Alberto Tarozzi, Bologna">
+<meta property="og:description" content="Ecografie ed ecocolordoppler a Bologna, in studio e a domicilio. Prenotazione online 24 ore su 24.">
+<meta name="theme-color" content="#f3f8f8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f766e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Studio Medico Ecografico Dott. Alberto Tarozzi","url":"https://www.ecografiabologna-tarozzi.it/","telephone":"+39 051 384747","email":"studiomedicotarozzi@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Via Battindarno 8","postalCode":"40133","addressLocality":"Bologna","addressRegion":"BO","addressCountry":"IT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"11:30"}]}
+</script>
+<style>
+@font-face{font-family:"Lexend";src:url("fonts/lexend-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
+:root{
+  /* colore: ghiaccio tinto verso il teal del logo, ardesia per il testo, un solo accento */
+  --bg:oklch(0.985 0.006 200);
+  --surface:oklch(0.997 0.003 200);
+  --tint:oklch(0.955 0.015 195);
+  --line:oklch(0.89 0.012 205);
+  --ink:oklch(0.25 0.035 245);
+  --muted:oklch(0.46 0.03 240);
+  --accent:oklch(0.49 0.09 188);
+  --accent-ink:oklch(0.40 0.08 190);
+  --accent-tint:oklch(0.94 0.035 185);
+  --on-accent:oklch(0.99 0.004 185);
+  --shadow:0 1px 2px oklch(0.25 0.035 245 / .06), 0 10px 28px oklch(0.25 0.035 245 / .07);
+  /* tipo: una famiglia, tre pesi, scala 1.25 */
+  --font:"Lexend",system-ui,"Segoe UI",Roboto,sans-serif;
+  --t-sm:.875rem; --t-0:1rem; --t-1:1.25rem; --t-2:1.5625rem; --t-3:clamp(1.55rem,1.2rem + 1.4vw,1.953rem); --t-4:clamp(1.85rem,1.3rem + 2.2vw,2.441rem); --t-5:clamp(2rem,1.35rem + 2.3vw,2.75rem);
+  /* forma: pillola per i controlli, 14px per ogni contenitore */
+  --r-pill:999px; --r-box:14px;
+  /* spazi: multipli di 8 */
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem; --s7:6rem;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --nav-h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;font-family:var(--font);font-size:var(--t-0);line-height:1.55;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+img,svg{max-width:100%}
+a{color:inherit}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(100% - 3rem,72rem);margin-inline:auto}
+.ic{width:1.25rem;height:1.25rem;flex:none}
+.skip{position:absolute;left:var(--s2);top:-4rem;z-index:100;background:var(--ink);color:var(--surface);padding:var(--s1) var(--s2);border-radius:var(--r-pill);text-decoration:none}
+.skip:focus{top:var(--s1)}
+
+/* tipografia */
+h1,h2,h3{font-weight:600;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
+h1{font-size:var(--t-5)}
+h2{font-size:var(--t-4)}
+h3{font-size:var(--t-1)}
+h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
+.lead{color:var(--muted);max-width:62ch;text-wrap:pretty}
+.small{font-size:var(--t-sm);color:var(--muted)}
+
+/* bottoni */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s1);min-height:48px;padding:.75rem 1.5rem;border-radius:var(--r-pill);font:inherit;font-weight:500;font-size:var(--t-0);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-ghost{border-color:var(--line);background:var(--surface);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn-quiet{min-height:44px;padding:.5rem 1.125rem;font-size:var(--t-sm);border-color:var(--line);background:transparent;color:var(--accent-ink)}
+.btn-quiet:hover{background:var(--accent-tint);border-color:var(--accent)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:var(--s3)}
+.brand{display:flex;align-items:center;gap:var(--s2);text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:var(--r-box);background:var(--accent);color:var(--on-accent);display:grid;place-items:center}
+.brand-mark .ic{width:1.5rem;height:1.5rem}
+.brand-name{display:block;font-weight:600;line-height:1.2;white-space:nowrap}
+.brand-sub{display:block;font-size:var(--t-sm);color:var(--muted);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:var(--s4)}
+.nav a{text-decoration:none;color:var(--muted);font-weight:500;padding:.5rem 0;transition:color .2s var(--ease)}
+.nav a:hover{color:var(--accent-ink)}
+.nav a.btn{color:var(--on-accent);padding:.75rem 1.5rem;box-shadow:none}
+.nav a.btn:hover{color:var(--on-accent)}
+.nav a[aria-current="true"]{color:var(--accent-ink);box-shadow:inset 0 -2px 0 var(--accent)}
+.menu-btn{display:none;width:48px;height:48px;border:1.5px solid var(--line);background:var(--surface);border-radius:var(--r-pill);color:var(--ink);cursor:pointer;align-items:center;justify-content:center}
+.menu-btn .ic{width:1.5rem;height:1.5rem}
+.drawer{display:none;background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:var(--nav-h);z-index:49}
+.drawer.open{display:block}
+.drawer a{display:flex;align-items:center;min-height:52px;padding-inline:1.5rem;text-decoration:none;font-weight:500;border-top:1px solid var(--line)}
+.drawer a:hover{background:var(--accent-tint)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,5.5rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:var(--s6);align-items:center}
+.hero h1{margin-bottom:var(--s3)}
+.hero .lead{font-size:var(--t-1);line-height:1.5;margin-bottom:var(--s4)}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.studio{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-box);padding:var(--s4);box-shadow:var(--shadow)}
+.studio h2{font-size:var(--t-1);margin-bottom:var(--s3)}
+.facts{display:grid;gap:var(--s3)}
+.facts li{display:flex;gap:var(--s2);align-items:flex-start}
+.facts .ic{color:var(--accent);margin-top:.2rem}
+.facts strong{display:block;font-weight:600}
+.facts a,.foot a,.prep-foot a{display:inline-block;padding-block:.65rem;text-decoration-color:var(--line);text-underline-offset:3px}
+.brand{min-height:44px}
+.facts a:hover{color:var(--accent-ink)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hero-copy,.studio{animation:rise .5s var(--ease) backwards}
+.studio{animation-delay:.1s}
+
+/* sezioni */
+.sec{padding-block:clamp(3.5rem,8vw,6rem)}
+.sec-tint{background:var(--tint)}
+.sec-head{display:grid;gap:var(--s2);margin-bottom:var(--s5);max-width:46rem}
+
+/* servizi: righe, non schede */
+.defs>li{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr) auto;gap:var(--s2) var(--s4);align-items:baseline;padding-block:var(--s3);border-top:1px solid var(--line)}
+.defs>li:last-child{border-bottom:1px solid var(--line)}
+.defs p{color:var(--muted)}
+
+/* tariffe */
+.tools{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3);align-items:center;justify-content:space-between;margin-bottom:var(--s4)}
+.filters{display:none;flex-wrap:wrap;gap:var(--s1)}
+.js .filters{display:flex}
+.chip{min-height:44px;padding:.5rem 1.125rem;border-radius:var(--r-pill);border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:inherit;font-size:var(--t-sm);font-weight:500;cursor:pointer;transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease)}
+.chip span{font-weight:400}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.search{display:none;position:relative;flex:1 1 16rem;max-width:22rem}
+.js .search{display:block}
+.search .ic{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;min-height:48px;padding:.5rem 1rem .5rem 2.75rem;border:1.5px solid var(--line);border-radius:var(--r-pill);background:var(--surface);color:var(--ink);font:inherit}
+.search input::placeholder{color:var(--muted)}
+.search input:focus-visible{outline-offset:2px}
+.grp{margin-bottom:var(--s5)}
+.grp[hidden],.rows li[hidden]{display:none}
+.grp h3{margin-bottom:var(--s2)}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s5)}
+.rows li{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding-block:var(--s2);border-top:1px solid var(--line)}
+.rows h4{font-weight:500}
+.rows p{font-size:var(--t-sm);color:var(--muted);margin-top:.125rem}
+.row-end{display:flex;align-items:center;gap:var(--s2);flex:none}
+.price{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.empty{display:none;color:var(--muted);padding-block:var(--s3)}
+.empty.show{display:block}
+.note{margin-top:var(--s3)}
+
+/* recensioni */
+.reviews{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--s6);align-items:start}
+.feature blockquote{font-size:var(--t-2);line-height:1.4;font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
+.feature figcaption,.quote figcaption{margin-top:var(--s2);font-size:var(--t-sm);color:var(--muted)}
+.quote{padding-block:var(--s3);border-top:1px solid var(--line)}
+.quote:first-child{border-top:0;padding-top:0}
+.quote blockquote{color:var(--ink);text-wrap:pretty}
+
+/* preparazione */
+.prep{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:var(--s5);align-items:start}
+.tabs{display:none;flex-direction:column;gap:var(--s1)}
+.js .tabs{display:flex}
+.tabs button{min-height:48px;text-align:left;padding:.5rem 1.125rem;border-radius:var(--r-box);border:1.5px solid transparent;background:transparent;color:var(--muted);font:inherit;font-weight:500;cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease)}
+.tabs button:hover{background:var(--accent-tint);color:var(--accent-ink)}
+.tabs button[aria-selected="true"]{background:var(--surface);border-color:var(--line);color:var(--ink);box-shadow:var(--shadow)}
+.panel{display:grid;gap:var(--s2);animation:rise .35s var(--ease) backwards}
+.panel+.panel{margin-top:var(--s5)}
+.js .panel+.panel{margin-top:0}
+.panel[hidden]{display:none}
+.checks{display:grid;gap:var(--s3);margin-top:var(--s2)}
+.checks li{display:flex;gap:var(--s2);align-items:flex-start}
+.checks .ic{color:var(--accent);margin-top:.2rem}
+.checks p{color:var(--muted);margin-top:.125rem}
+.prep-foot{margin-top:var(--s4)}
+.prep-foot a{color:var(--accent-ink)}
+
+/* dottore */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s6);align-items:start}
+.about h2{margin-bottom:var(--s3)}
+.about .lead+.lead{margin-top:var(--s2)}
+.creds{display:grid;gap:var(--s3)}
+.creds li{display:flex;gap:var(--s2);align-items:flex-start}
+.creds .ic{color:var(--accent);margin-top:.2rem}
+.creds p{color:var(--muted);margin-top:.125rem}
+
+/* app */
+.app{background:var(--accent-tint);border-radius:var(--r-box);padding:clamp(1.5rem,4vw,3rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s4);align-items:center}
+.app h2{font-size:var(--t-3);margin-bottom:var(--s1)}
+.app p{color:var(--muted);max-width:56ch}
+
+/* contatti */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s6);align-items:start}
+.hours{width:100%;border-collapse:collapse;margin-top:var(--s2)}
+.hours th,.hours td{padding:.75rem 0;border-top:1px solid var(--line);text-align:left;font-weight:400}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:1px solid var(--line)}
+.where{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-box);padding:var(--s4);display:grid;gap:var(--s3)}
+.where address{font-style:normal;font-size:var(--t-1);font-weight:500;line-height:1.4}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line);background:var(--tint);padding-block:var(--s5) calc(var(--s5) + 4.5rem)}
+.foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.foot h2{font-size:var(--t-0);margin-bottom:var(--s1)}
+.foot p,.foot a{font-size:var(--t-sm);color:var(--muted)}
+.foot a:hover{color:var(--accent-ink)}
+.legal{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);font-size:var(--t-sm);color:var(--muted)}
+
+/* barra mobile: contatto a un tocco, zona pollice */
+.dock{display:none}
+
+@media (max-width:1120px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+}
+@media (max-width:960px){
+  .hero-grid,.reviews,.prep,.about,.contact,.app{grid-template-columns:minmax(0,1fr)}
+  .hero-grid{gap:var(--s5)}
+  .tabs{flex-direction:row;overflow-x:auto;padding-bottom:var(--s1)}
+  .tabs button{white-space:nowrap}
+  .rows{grid-template-columns:minmax(0,1fr)}
+  .defs>li{grid-template-columns:minmax(0,1fr) auto}
+  .defs>li p{grid-column:1/-1;grid-row:2}
+  .app .btn{justify-self:start}
+  .foot{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .brand-sub{display:none}
+  .brand-name{font-size:var(--t-sm)}
+  .brand-mark{width:40px;height:40px}
+  .hero{padding-top:var(--s4)}
+  .hero .lead{font-size:var(--t-0)}
+  .actions .btn{flex:1 1 100%}
+  .studio{padding:var(--s3)}
+  .rows li{align-items:flex-start;flex-direction:column;gap:var(--s1)}
+  .row-end{width:100%;justify-content:space-between}
+  .dock{display:flex;gap:var(--s1);position:fixed;inset-inline:0;bottom:0;z-index:60;padding:var(--s1) var(--s2) calc(var(--s1) + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line)}
+  .dock .btn{flex:1}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false"><defs><symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol><symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol><symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol><symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol><symbol id="i-calendar-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19h6"/><path d="M16 2v4"/><path d="M19 16v6"/><path d="M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5"/><path d="M3 10h18"/><path d="M8 2v4"/></symbol><symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></symbol><symbol id="i-utensils-crossed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></symbol><symbol id="i-glass-water" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z"/><path d="M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0"/></symbol><symbol id="i-folder-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v1.5"/><path d="M13.9 17.45c-1.2-1.2-1.14-2.8-.2-3.73a2.43 2.43 0 0 1 3.44 0l.36.34.34-.34a2.43 2.43 0 0 1 3.45-.01c.95.95 1 2.53-.2 3.74L17.5 21Z"/></symbol><symbol id="i-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol><symbol id="i-triangle-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol><symbol id="i-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol><symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol><symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-heart-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></symbol><symbol id="i-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol><symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol><symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol></defs></svg>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Studio Medico Ecografico Tarozzi, inizio pagina">
+      <span class="brand-mark"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-activity"/></svg></span>
+      <span><span class="brand-name">Dott. Alberto Tarozzi</span><span class="brand-sub">Studio Medico Ecografico, Bologna</span></span>
+    </a>
+    <nav class="nav" aria-label="Menu principale">
+      <a href="#servizi">Servizi</a>
+      <a href="#tariffe">Tariffe</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#preparazione">Preparazione</a>
+      <a href="#dottore">Il dottore</a>
+      <a href="#contatti">Contatti</a>
+      <a class="btn btn-primary" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener">Prenota</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="drawer"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Menu mobile">
+  <a href="#servizi">Servizi</a>
+  <a href="#tariffe">Tariffe</a>
+  <a href="#recensioni">Recensioni</a>
+  <a href="#preparazione">Preparazione</a>
+  <a href="#dottore">Il dottore</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Ecografie a Bologna, spiegate con chiarezza</h1>
+      <p class="lead">Ecografie ed ecocolordoppler in studio e a domicilio. Prenoti online a qualsiasi ora e il dottore ti illustra l'esito.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-calendar-check"/></svg> Prenota</a>
+        <a class="btn btn-ghost" href="tel:051384747"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Chiama</a>
+      </div>
+    </div>
+    <aside class="studio" aria-labelledby="studio-t">
+      <h2 id="studio-t">Lo studio</h2>
+      <ul class="facts">
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><div><strong>Via Battindarno 8</strong>40133 Bologna</div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><div><strong>Lunedì - venerdì</strong>8:00 - 18:30<br>Sabato 8:00 - 11:30</div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><strong>Studio</strong><a href="tel:051384747">051 38 47 47</a></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg><div><strong>Cellulare e WhatsApp</strong><a href="tel:3402166135">340 2166135</a></div></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="servizi">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cosa facciamo</h2>
+      <p class="lead">Diagnostica per immagini e dietologia, con prenotazione online 24 ore su 24.</p>
+    </div>
+    <ul class="defs">
+      <li><h3>Ecografie</h3><p>Addome, tiroide e capo collo, mammella, muscoli e articolazioni, scroto e parti molli.</p><a class="btn btn-quiet" href="#tariffe">Vedi le tariffe</a></li>
+      <li><h3>Ecocolordoppler</h3><p>Indagine vascolare: carotidi e vertebrali, vasi addominali, arterie renali, scroto, vene degli arti inferiori.</p><a class="btn btn-quiet" href="#t-doppler">Vedi le tariffe</a></li>
+      <li><h3>Ecografie a domicilio</h3><p>Nella tua abitazione, a Bologna e nei comuni limitrofi. Documentazione e risposta subito, via email o WhatsApp.</p><a class="btn btn-quiet" href="tel:3402166135">Chiama</a></li>
+      <li><h3>Dietologia</h3><p>Dieta personalizzata elaborata dal medico, in studio oppure a distanza, online.</p><a class="btn btn-quiet" href="#t-dieta">Vedi le tariffe</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="tariffe">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Tariffe</h2>
+      <p class="lead">Il tariffario dello studio. Pagamenti in contanti e con POS in studio.</p>
+    </div>
+    <div class="tools">
+      <div class="filters" role="group" aria-label="Filtra per tipo di esame"><button class="chip" type="button" data-filter="all" aria-pressed="true">Tutte <span>(34)</span></button><button class="chip" type="button" data-filter="addome" aria-pressed="false">Addome e pelvi <span>(8)</span></button><button class="chip" type="button" data-filter="collo" aria-pressed="false">Capo, collo, seno e cute <span>(8)</span></button><button class="chip" type="button" data-filter="muscolo" aria-pressed="false">Muscolo-tendinea e articolare <span>(4)</span></button><button class="chip" type="button" data-filter="doppler" aria-pressed="false">Ecocolordoppler <span>(6)</span></button><button class="chip" type="button" data-filter="pacchetti" aria-pressed="false">Check-up, pacchetti e domicilio <span>(5)</span></button><button class="chip" type="button" data-filter="dieta" aria-pressed="false">Dietologia <span>(3)</span></button></div>
+      <div class="search"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-search"/></svg><input type="search" id="q" placeholder="Cerca un esame" aria-label="Cerca un esame"></div>
+    </div>
+    <div id="list">
+<section class="grp" data-cat="addome" id="t-addome"><h3>Addome e pelvi</h3><ul class="rows"><li data-q="ecografia addome completo fegato, vie biliari, pancreas, milza, reni, aorta, vescica e organi pelvici"><div><h4>Ecografia addome completo</h4><p>Fegato, vie biliari, pancreas, milza, reni, aorta, vescica e organi pelvici</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome completo">Prenota</a></div></li><li data-q="ecografia addome superiore reni, fegato, colecisti, pancreas, milza, aorta addominale"><div><h4>Ecografia addome superiore</h4><p>Reni, fegato, colecisti, pancreas, milza, aorta addominale</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome superiore">Prenota</a></div></li><li data-q="ecografia addome inferiore vescica, prostata, utero e ovaie"><div><h4>Ecografia addome inferiore</h4><p>Vescica, prostata, utero e ovaie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome inferiore">Prenota</a></div></li><li data-q="ecografia vie urinarie reni e surreni, ureteri, vescica"><div><h4>Ecografia vie urinarie</h4><p>Reni e surreni, ureteri, vescica</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia vie urinarie">Prenota</a></div></li><li data-q="ecografia pelvica ginecologica utero e ovaie"><div><h4>Ecografia pelvica ginecologica</h4><p>Utero e ovaie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia pelvica ginecologica">Prenota</a></div></li><li data-q="ecografia pelvica prostatica prostata"><div><h4>Ecografia pelvica prostatica</h4><p>Prostata</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia pelvica prostatica">Prenota</a></div></li><li data-q="ecografia anse intestinali studio delle anse intestinali"><div><h4>Ecografia anse intestinali</h4><p>Studio delle anse intestinali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia anse intestinali">Prenota</a></div></li><li data-q="ecografia scrotale e testicoli testicoli, varicocele, idrocele, ernie scrotali"><div><h4>Ecografia scrotale e testicoli</h4><p>Testicoli, varicocele, idrocele, ernie scrotali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia scrotale e testicoli">Prenota</a></div></li></ul></section>
+<section class="grp" data-cat="collo" id="t-collo"><h3>Capo, collo, seno e cute</h3><ul class="rows"><li data-q="ecografia capo collo tiroide e paratiroidi, ghiandole salivari, stazioni linfonodali"><div><h4>Ecografia capo collo</h4><p>Tiroide e paratiroidi, ghiandole salivari, stazioni linfonodali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia capo collo">Prenota</a></div></li><li data-q="ecografia tiroide studio mirato della tiroide"><div><h4>Ecografia tiroide</h4><p>Studio mirato della tiroide</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia tiroide">Prenota</a></div></li><li data-q="ecografia ghiandole salivari parotidi e ghiandole sottomandibolari"><div><h4>Ecografia ghiandole salivari</h4><p>Parotidi e ghiandole sottomandibolari</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia ghiandole salivari">Prenota</a></div></li><li data-q="ecografia linfonodi, un tratto stazioni linfonodali di un distretto"><div><h4>Ecografia linfonodi, un tratto</h4><p>Stazioni linfonodali di un distretto</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia linfonodi, un tratto">Prenota</a></div></li><li data-q="ecografia linfonodi, due tratti stazioni linfonodali di due distretti"><div><h4>Ecografia linfonodi, due tratti</h4><p>Stazioni linfonodali di due distretti</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia linfonodi, due tratti">Prenota</a></div></li><li data-q="ecografia mammaria mammelle e cavi ascellari, anche a scopo preventivo"><div><h4>Ecografia mammaria</h4><p>Mammelle e cavi ascellari, anche a scopo preventivo</p></div><div class="row-end"><span class="price">75 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia mammaria">Prenota</a></div></li><li data-q="ecografia parti molli masse palpabili sotto il piano cutaneo"><div><h4>Ecografia parti molli</h4><p>Masse palpabili sotto il piano cutaneo</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia parti molli">Prenota</a></div></li><li data-q="ecografia cute e sottocute studio di cute e tessuto sottocutaneo"><div><h4>Ecografia cute e sottocute</h4><p>Studio di cute e tessuto sottocutaneo</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia cute e sottocute">Prenota</a></div></li></ul></section>
+<section class="grp" data-cat="muscolo" id="t-muscolo"><h3>Muscolo-tendinea e articolare</h3><ul class="rows"><li data-q="ecografia muscolo tendinea, un tratto dolori muscolari e tendinei"><div><h4>Ecografia muscolo tendinea, un tratto</h4><p>Dolori muscolari e tendinei</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia muscolo tendinea, un tratto">Prenota</a></div></li><li data-q="ecografia muscolo tendinea, due tratti due distretti muscolo-tendinei"><div><h4>Ecografia muscolo tendinea, due tratti</h4><p>Due distretti muscolo-tendinei</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia muscolo tendinea, due tratti">Prenota</a></div></li><li data-q="ecografia osteoarticolare, un tratto mani e polsi, ginocchia, spalle, gomiti, piedi e caviglie"><div><h4>Ecografia osteoarticolare, un tratto</h4><p>Mani e polsi, ginocchia, spalle, gomiti, piedi e caviglie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia osteoarticolare, un tratto">Prenota</a></div></li><li data-q="ecografia osteoarticolare, due tratti due distretti articolari"><div><h4>Ecografia osteoarticolare, due tratti</h4><p>Due distretti articolari</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia osteoarticolare, due tratti">Prenota</a></div></li></ul></section>
+<section class="grp" data-cat="doppler" id="t-doppler"><h3>Ecocolordoppler</h3><ul class="rows"><li data-q="ecocolordoppler tsa carotidi e vertebrali"><div><h4>Ecocolordoppler TSA</h4><p>Carotidi e vertebrali</p></div><div class="row-end"><span class="price">85 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler TSA">Prenota</a></div></li><li data-q="ecocolordoppler vasi addominali aorta, renali, iliache, mesenterica superiore"><div><h4>Ecocolordoppler vasi addominali</h4><p>Aorta, renali, iliache, mesenterica superiore</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler vasi addominali">Prenota</a></div></li><li data-q="ecocolordoppler arterie renali flusso delle arterie renali"><div><h4>Ecocolordoppler arterie renali</h4><p>Flusso delle arterie renali</p></div><div class="row-end"><span class="price">85 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler arterie renali">Prenota</a></div></li><li data-q="ecocolordoppler scrotale studio vascolare dello scroto, varicocele"><div><h4>Ecocolordoppler scrotale</h4><p>Studio vascolare dello scroto, varicocele</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler scrotale">Prenota</a></div></li><li data-q="ecocolordoppler venoso arti inferiori insufficienza venosa e ricerca di trombi, entrambi gli arti"><div><h4>Ecocolordoppler venoso arti inferiori</h4><p>Insufficienza venosa e ricerca di trombi, entrambi gli arti</p></div><div class="row-end"><span class="price">110 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler venoso arti inferiori">Prenota</a></div></li><li data-q="ecocolordoppler venoso, singolo arto inferiore un solo arto inferiore"><div><h4>Ecocolordoppler venoso, singolo arto inferiore</h4><p>Un solo arto inferiore</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler venoso, singolo arto inferiore">Prenota</a></div></li></ul></section>
+<section class="grp" data-cat="pacchetti" id="t-pacchetti"><h3>Check-up, pacchetti e domicilio</h3><ul class="rows"><li data-q="check-up prevenzione base due esami a scelta dal tariffario"><div><h4>Check-up prevenzione base</h4><p>Due esami a scelta dal tariffario</p></div><div class="row-end"><span class="price">110 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Check-up prevenzione base">Prenota</a></div></li><li data-q="check-up prevenzione avanzata tre esami a scelta dal tariffario"><div><h4>Check-up prevenzione avanzata</h4><p>Tre esami a scelta dal tariffario</p></div><div class="row-end"><span class="price">155 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Check-up prevenzione avanzata">Prenota</a></div></li><li data-q="pacchetto ecografico 3 esami 3 crediti validi 3 anni, 51,70 € a esame"><div><h4>Pacchetto ecografico 3 esami</h4><p>3 crediti validi 3 anni, 51,70 € a esame</p></div><div class="row-end"><span class="price">155 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Pacchetto ecografico 3 esami">Prenota</a></div></li><li data-q="pacchetto ecografico 5 esami 5 crediti validi 3 anni, 42 € a esame"><div><h4>Pacchetto ecografico 5 esami</h4><p>5 crediti validi 3 anni, 42 € a esame</p></div><div class="row-end"><span class="price">210 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Pacchetto ecografico 5 esami">Prenota</a></div></li><li data-q="ecografia a domicilio bologna e comuni limitrofi. 30 € per ogni esame aggiuntivo, 6 € in più in ztl"><div><h4>Ecografia a domicilio</h4><p>Bologna e comuni limitrofi. 30 € per ogni esame aggiuntivo, 6 € in più in ZTL</p></div><div class="row-end"><span class="price">150 €</span><a class="btn btn-quiet" href="tel:3402166135" aria-label="Chiama per Ecografia a domicilio">Chiama</a></div></li></ul></section>
+<section class="grp" data-cat="dieta" id="t-dieta"><h3>Dietologia</h3><ul class="rows"><li data-q="visita dietologica visita medica e dieta personalizzata, in studio o online"><div><h4>Visita dietologica</h4><p>Visita medica e dieta personalizzata, in studio o online</p></div><div class="row-end"><span class="price">100 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Visita dietologica">Prenota</a></div></li><li data-q="visita dietologica con ecografia addome superiore e tiroide visita completa con le due ecografie"><div><h4>Visita dietologica con ecografia addome superiore e tiroide</h4><p>Visita completa con le due ecografie</p></div><div class="row-end"><span class="price">170 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Visita dietologica con ecografia addome superiore e tiroide">Prenota</a></div></li><li data-q="controllo dieta controllo di follow-up"><div><h4>Controllo dieta</h4><p>Controllo di follow-up</p></div><div class="row-end"><span class="price">30 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Controllo dieta">Prenota</a></div></li></ul></section>
+    </div>
+    <p class="empty" id="empty" role="status">Nessun esame trovato. Prova con un'altra parola o chiama lo studio.</p>
+    <p class="small note">L'ecografia a domicilio si prenota per telefono o email. Le prenotazioni online si possono modificare o annullare nei due giorni prima dell'esame; il giorno stesso chiama lo studio.</p>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="recensioni">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cosa dicono i pazienti</h2>
+      <p class="lead">Recensioni lasciate su Google.</p>
+    </div>
+    <div class="reviews">
+      <figure class="feature"><blockquote><p>Medico eccezionale, disponibilissimo e davvero cortese. Scrupoloso nelle valutazioni e cosa molto importante, fa sentire il paziente a proprio agio. Consigliatissimo.</p></blockquote><figcaption>Frida Dotti, Giugno 2020</figcaption></figure>
+      <div><figure class="quote"><blockquote><p>Professionalità e gentilezza sono gli aggettivi che descrivono al meglio lo studio medico. Il dottore e la segretaria sono molto gentili, disponibili nell&#x27;ascoltare e capaci di mettere completamente a proprio agio. Tempi di attesa brevi, prezzo accessibilissimo. Ottimo il sistema di prenotazione e di promemoria con email.</p></blockquote><figcaption>Mario Viniello, Ottobre 2018</figcaption></figure><figure class="quote"><blockquote><p>Il dottore è stato estremamente gentile, disponibile e professionale nell&#x27;illustrare i risultati dell&#x27;esame e nel fornire indicazioni per la soluzione del problema. Cortesia e disponibilità anche nel settore amministrativo.</p></blockquote><figcaption>Emiliano Pancaldi, Settembre 2019</figcaption></figure><figure class="quote"><blockquote><p>Cordialità e professionalità. Prezzi contenuti, ottimo riferimento per il futuro.</p></blockquote><figcaption>Stefano Citriniti, Maggio 2019</figcaption></figure><figure class="quote"><blockquote><p>Sempre molto disponibile e preciso. Ormai tutta la mia famiglia si affida al Dott. Tarozzi in caso di necessità.</p></blockquote><figcaption>Elena Berti, Gennaio 2019</figcaption></figure><figure class="quote"><blockquote><p>Assolutamente da consigliare. Il dr Tarozzi è un professionista serio, scrupoloso e molto gentile e cordiale.</p></blockquote><figcaption>Domenico Pranteda, Settembre 2018</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="preparazione">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come prepararsi all'esame</h2>
+      <p class="lead">Indicazioni per soggetti adulti, secondo la pagina di preparazione dello studio.</p>
+    </div>
+    <div class="prep">
+      <div class="tabs" role="tablist" aria-label="Tipo di esame"><button type="button" role="tab" id="tab-completo" aria-controls="prep-completo" aria-selected="true" tabindex="0">Addome completo</button><button type="button" role="tab" id="tab-superiore" aria-controls="prep-superiore" aria-selected="false" tabindex="-1">Addome superiore e anse</button><button type="button" role="tab" id="tab-inferiore" aria-controls="prep-inferiore" aria-selected="false" tabindex="-1">Addome inferiore e pelvica</button><button type="button" role="tab" id="tab-altre" aria-controls="prep-altre" aria-selected="false" tabindex="-1">Tiroide, seno, muscoli, Doppler</button></div>
+      <div><div class="panel" id="prep-completo" role="tabpanel" aria-labelledby="tab-completo"><h3>Addome completo</h3><p class="lead">Fegato, colecisti e vie biliari, pancreas, milza, reni, aorta, vescica e organi pelvici.</p><ul class="checks"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pill"/></svg><div><h4>Nei due giorni precedenti: carbone vegetale</h4><p>In caso di meteorismo (gonfiori addominali), due compresse dopo colazione, dopo pranzo e dopo cena. Da evitare: verdura, latte, latticini, frutta, legumi e bevande gassate.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-utensils-crossed"/></svg><div><h4>Digiuno da almeno 6 ore</h4><p>Se compatibile con le terapie in atto. Se l'appuntamento è nel pomeriggio, fai un pasto leggero 6 ore prima.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-glass-water"/></svg><div><h4>Vescica piena</h4><p>Urina due ore prima dell'esame, bevi un litro d'acqua un'ora e mezzo prima dell'appuntamento (in mezz'ora) e non urinare fino all'esame.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-triangle-alert"/></svg><div><h4>Controindicazioni</h4><p>Per pazienti con patologie cardiache o restrizioni nell'assunzione di liquidi, fai riferimento al tuo medico per la preparazione.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-folder-heart"/></svg><div><h4>Documentazione e terapie</h4><p>Porta cartelle cliniche, esami di laboratorio e soprattutto precedenti ecografie. Assumi le eventuali terapie in corso secondo lo schema abituale.</p></div></li></ul></div><div class="panel" id="prep-superiore" role="tabpanel" aria-labelledby="tab-superiore"><h3>Addome superiore e anse intestinali</h3><p class="lead">Reni, fegato, colecisti, pancreas, milza e aorta addominale.</p><ul class="checks"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pill"/></svg><div><h4>Nei due giorni precedenti: carbone vegetale</h4><p>In caso di meteorismo (gonfiori addominali), due compresse dopo colazione, dopo pranzo e dopo cena. Da evitare: verdura, latte, latticini, frutta, legumi e bevande gassate.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-utensils-crossed"/></svg><div><h4>Pasto leggero 6 ore prima</h4><p>Se l'appuntamento è nel pomeriggio, 6 ore prima fai un pasto leggero.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-folder-heart"/></svg><div><h4>Documentazione e terapie</h4><p>Porta cartelle cliniche, esami di laboratorio e soprattutto precedenti ecografie. Assumi le eventuali terapie in corso secondo lo schema abituale.</p></div></li></ul></div><div class="panel" id="prep-inferiore" role="tabpanel" aria-labelledby="tab-inferiore"><h3>Addome inferiore, vie urinarie, prostata, pelvica</h3><p class="lead">Vescica, prostata, utero e ovaie, reni e vie urinarie.</p><ul class="checks"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pill"/></svg><div><h4>Nei due giorni precedenti: carbone vegetale</h4><p>In caso di meteorismo (gonfiori addominali), due compresse dopo colazione, dopo pranzo e dopo cena. Da evitare: verdura, latte, latticini, frutta, legumi e bevande gassate.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-glass-water"/></svg><div><h4>Vescica piena</h4><p>Urina due ore prima dell'esame, bevi un litro d'acqua un'ora e mezzo prima dell'appuntamento (in mezz'ora) e non urinare fino all'esame.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-triangle-alert"/></svg><div><h4>Controindicazioni</h4><p>Per pazienti con patologie cardiache o restrizioni nell'assunzione di liquidi, fai riferimento al tuo medico per la preparazione.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-folder-heart"/></svg><div><h4>Documentazione e terapie</h4><p>Porta cartelle cliniche, esami di laboratorio e soprattutto precedenti ecografie. Assumi le eventuali terapie in corso secondo lo schema abituale.</p></div></li></ul></div><div class="panel" id="prep-altre" role="tabpanel" aria-labelledby="tab-altre"><h3>Tiroide, seno, muscoli, articolazioni, Doppler</h3><p class="lead">Per questi esami la pagina di preparazione del sito non indica norme specifiche.</p><ul class="checks"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><h4>Hai un dubbio? Chiedi allo studio</h4><p>Telefona al 051 38 47 47 o scrivi dal modulo contatti: ti diranno se serve qualche accorgimento.</p></div></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-folder-heart"/></svg><div><h4>Porta i referti precedenti</h4><p>Cartelle cliniche, esami e precedenti ecografie permettono il confronto nel tempo.</p></div></li></ul></div></div>
+    </div>
+    <p class="prep-foot small"><a href="https://www.ecografiabologna-tarozzi.it/preparazione-ecografia" target="_blank" rel="noopener">Scarica la guida completa in PDF dal sito dello studio</a></p>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="dottore">
+  <div class="wrap about">
+    <div>
+      <h2>Il Dott. Alberto Tarozzi</h2>
+      <p class="lead">Medico chirurgo laureato a Bologna nel 1994, dal 1995 si dedica all'ecografia internistica. Lo studio privato esegue ecografie a Bologna da più di vent'anni.</p>
+      <p class="lead">Ambiente sereno, totale privacy e un medico che illustra l'esito dell'esame.</p>
+    </div>
+    <ul class="creds">
+      <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-graduation-cap"/></svg><div><h4>Laurea in Medicina e Chirurgia</h4><p>Università di Bologna, 28 ottobre 1994.</p></div></li>
+      <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-shield-check"/></svg><div><h4>Ordine dei Medici di Bologna n° 13066</h4><p>Iscritto al Registro Nazionale dei Medici Ecografisti SIUMB.</p></div></li>
+      <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-award"/></svg><div><h4>Formazione SIUMB continua</h4><p>Corsi di ecodoppler avanzato addominale e periferico, aggiornamenti ecografici, procedure ecoguidate.</p></div></li>
+      <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-heart-handshake"/></svg><div><h4>Dietologia</h4><p>Diete personalizzate in studio e online. Corso di dietoterapia dell'obesità, 2000.</p></div></li>
+    </ul>
+  </div>
+  <div class="wrap" style="margin-top:var(--s6)">
+    <div class="app">
+      <div>
+        <h2>App LaMiaEco</h2>
+        <p>Prenoti scegliendo giorno e ora, ricevi conferma e promemoria via email, vedi lo storico e i crediti dei pacchetti prepagati. Gratuita e senza pubblicità.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://www.ecografiabologna-tarozzi.it/app-lamiaeco" target="_blank" rel="noopener">Scopri l'app <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-external-link"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contatti">
+  <div class="wrap contact">
+    <div>
+      <h2 style="margin-bottom:var(--s3)">Dove siamo</h2>
+      <ul class="facts">
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><strong>Studio</strong><a href="tel:051384747">051 38 47 47</a></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg><div><strong>Cellulare e WhatsApp</strong><a href="tel:3402166135">340 2166135</a>, <a href="https://wa.me/393402166135?text=Salve%20Dott.%20Tarozzi%2C%20vorrei%20prenotare%20un%20esame%20ecografico" target="_blank" rel="noopener">scrivi su WhatsApp</a></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><div><strong>Email</strong><a href="mailto:studiomedicotarozzi@gmail.com">studiomedicotarozzi@gmail.com</a></div></li>
+      </ul>
+      <table class="hours">
+        <caption class="small" style="text-align:left;padding-top:var(--s3)">Orari di apertura</caption>
+        <tbody>
+          <tr><th scope="row">Lunedì - venerdì</th><td>8:00 - 18:30</td></tr>
+          <tr><th scope="row">Sabato</th><td>8:00 - 11:30</td></tr>
+          <tr><th scope="row">Domenica</th><td>Chiuso</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="where">
+      <h3>Studio medico</h3>
+      <address>Via Battindarno 8<br>40133 Bologna (BO)</address>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Via+Battindarno+8%2C+40133+Bologna" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg> Apri in Google Maps</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div><h2>Studio Medico Ecografico Dott. Alberto Tarozzi</h2><p>Ecografie, ecocolordoppler in studio e a domicilio, terapie dietetiche a Bologna.</p></div>
+      <div><h2>Dati professionali</h2><p>Ordine dei Medici di Bologna n° 13066<br>Registro Nazionale Medici Ecografisti SIUMB<br>P.IVA 04232980377</p></div>
+      <div><h2>Contatti</h2><p>Via Battindarno 8, 40133 Bologna<br>051 38 47 47, 340 2166135<br>studiomedicotarozzi@gmail.com</p><p><a href="https://www.ecografiabologna-tarozzi.it/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>, <a href="https://www.ecografiabologna-tarozzi.it/informativa-cookie" target="_blank" rel="noopener">Informativa Cookie</a></p></div>
+    </div>
+    <p class="legal">Proposta di restyling realizzata da MadHat Works. Non è il sito ufficiale dello studio. Testi, tariffe e recensioni provengono da ecografiabologna-tarozzi.it.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-primary" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-calendar-check"/></svg> Prenota</a>
+  <a class="btn btn-ghost" href="tel:051384747"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Chiama</a>
+</div>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn'),drawer=document.getElementById('drawer');
+  function setMenu(o){drawer.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o)}
+  menuBtn.addEventListener('click',function(){setMenu(!drawer.classList.contains('open'))});
+  drawer.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  /* tariffe: filtro e ricerca */
+  var chips=[].slice.call(document.querySelectorAll('.chip')),grps=[].slice.call(document.querySelectorAll('.grp')),q=document.getElementById('q'),empty=document.getElementById('empty'),cat='all';
+  function render(){
+    var term=q.value.toLowerCase().trim(),shown=0;
+    grps.forEach(function(g){
+      var any=0;
+      [].forEach.call(g.querySelectorAll('li'),function(li){
+        var ok=(cat==='all'||g.dataset.cat===cat)&&(!term||li.dataset.q.indexOf(term)>-1);
+        li.hidden=!ok;if(ok)any++;
+      });
+      g.hidden=!any;shown+=any;
+    });
+    empty.classList.toggle('show',!shown);
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    c.setAttribute('aria-pressed','true');cat=c.dataset.filter;render();
+  })});
+  q.addEventListener('input',render);
+  document.querySelectorAll('a[href^="#t-"]').forEach(function(a){a.addEventListener('click',function(){
+    var k=a.getAttribute('href').slice(3);var c=document.querySelector('.chip[data-filter="'+k+'"]');if(c)c.click();
+  })});
+
+  /* preparazione: schede */
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]')),panels=[].slice.call(document.querySelectorAll('.panel'));
+  function pick(t){
+    tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+    panels.forEach(function(p){p.hidden=p.id!==t.getAttribute('aria-controls')});
+  }
+  panels.forEach(function(p,i){p.hidden=i>0});
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){pick(b)});
+    b.addEventListener('keydown',function(e){
+      var n=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;
+      if(!n)return;e.preventDefault();var t=tabs[(i+n+tabs.length)%tabs.length];t.focus();pick(t);
+    });
+  });
+
+  /* voce di menu attiva */
+  var links=[].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(en.isIntersecting){links.forEach(function(l){l.removeAttribute('aria-current')});
+        var l=document.querySelector('.nav a[href="#'+en.target.id+'"]');if(l)l.setAttribute('aria-current','true')}
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
