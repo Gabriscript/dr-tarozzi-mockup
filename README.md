@@ -6,3 +6,5 @@ Testi, tariffe e recensioni provengono da ecografiabologna-tarozzi.it. Non e il 
 
 Font: Lexend (SIL OFL 1.1), self-hosted in `fonts/`.
 Icone: Lucide (ISC), inline.
+
+Foto: Pexels (licenza Pexels, uso libero), a scopo illustrativo. Non ritraggono lo studio ne il dottore. In `img/`.

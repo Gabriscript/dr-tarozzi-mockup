@@ -98,7 +98,7 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
 
 /* hero */
 .hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,5.5rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:var(--s6);align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s6);align-items:center}
 .hero h1{margin-bottom:var(--s3)}
 .hero .lead{font-size:var(--t-1);line-height:1.5;margin-bottom:var(--s4)}
 .actions{display:flex;flex-wrap:wrap;gap:var(--s2)}
@@ -125,32 +125,21 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
 .defs>li:last-child{border-bottom:1px solid var(--line)}
 .defs p{color:var(--muted)}
 
-/* tariffe */
-.tools{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3);align-items:center;justify-content:space-between;margin-bottom:var(--s4)}
-.filters{display:none;flex-wrap:wrap;gap:var(--s1)}
-.js .filters{display:flex}
-.chip{min-height:44px;padding:.5rem 1.125rem;border-radius:var(--r-pill);border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:inherit;font-size:var(--t-sm);font-weight:500;cursor:pointer;transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease)}
-.chip span{font-weight:400}
-.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
-.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
-.search{display:none;position:relative;flex:1 1 16rem;max-width:22rem}
-.js .search{display:block}
-.search .ic{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted)}
-.search input{width:100%;min-height:48px;padding:.5rem 1rem .5rem 2.75rem;border:1.5px solid var(--line);border-radius:var(--r-pill);background:var(--surface);color:var(--ink);font:inherit}
-.search input::placeholder{color:var(--muted)}
-.search input:focus-visible{outline-offset:2px}
-.grp{margin-bottom:var(--s5)}
-.grp[hidden],.rows li[hidden]{display:none}
-.grp h3{margin-bottom:var(--s2)}
-.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s5)}
-.rows li{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding-block:var(--s2);border-top:1px solid var(--line)}
-.rows h4{font-weight:500}
-.rows p{font-size:var(--t-sm);color:var(--muted);margin-top:.125rem}
-.row-end{display:flex;align-items:center;gap:var(--s2);flex:none}
-.price{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
-.empty{display:none;color:var(--muted);padding-block:var(--s3)}
-.empty.show{display:block}
-.note{margin-top:var(--s3)}
+/* tariffe: un prezzo dominante, il resto in elenchi corti */
+.pricing{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--s5);align-items:start}
+.tier{background:var(--accent-tint);border-radius:var(--r-box);padding:clamp(1.5rem,3vw,2.5rem)}
+.tier-price{font-size:clamp(3.05rem,2rem + 4vw,4.77rem);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--accent-ink);margin-bottom:var(--s2)}
+.tier h3{margin-bottom:var(--s3)}
+.tags{display:flex;flex-wrap:wrap;gap:var(--s1)}
+.tags li{background:var(--surface);border-radius:var(--r-pill);padding:.5rem 1rem;font-size:var(--t-sm);font-weight:500}
+.others h3,.cols h3{margin-bottom:var(--s1)}
+.others h3:not(:first-child){margin-top:var(--s4)}
+.plist li{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);padding-block:.75rem;border-top:1px solid var(--line)}
+.plist li:last-child{border-bottom:1px solid var(--line)}
+.plist b{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pricing .small,.cols .small{margin-top:var(--s2)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s6)}
+.note{margin-top:var(--s4)}
 
 /* recensioni */
 .reviews{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--s6);align-items:start}
@@ -209,6 +198,63 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
 .foot a:hover{color:var(--accent-ink)}
 .legal{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);font-size:var(--t-sm);color:var(--muted)}
 
+
+/* foto */
+.photo{display:block;width:100%;height:100%;object-fit:cover;border-radius:var(--r-box);background:var(--tint)}
+
+/* hero con foto */
+.hero-fig{position:relative}
+.hero-fig .photo{aspect-ratio:4/3.4;box-shadow:var(--shadow)}
+.hero-fig .studio{position:absolute;left:calc(var(--s4) * -1);bottom:var(--s3);width:min(18.5rem,80%);padding:var(--s3);animation:none}
+.hero-fig .studio h2{font-size:var(--t-0);margin-bottom:var(--s2)}
+.hero-fig .facts{gap:var(--s2)}
+.hero-fig .facts li{font-size:var(--t-sm)}
+
+/* come funziona: sequenza reale */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:1.5rem;right:1.5rem;top:1.5rem;height:2px;background:var(--line)}
+.steps li{position:relative;display:grid;gap:var(--s1);align-content:start}
+.steps li::before{counter-increment:s;content:counter(s);position:relative;z-index:1;width:3rem;height:3rem;border-radius:var(--r-pill);background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:600;margin-bottom:var(--s1)}
+.steps p{color:var(--muted);max-width:34ch}
+
+/* servizi: bento di 4 celle con fondi diversi */
+.bento{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:repeat(3,auto);gap:var(--s2)}
+.cell{border-radius:var(--r-box);padding:clamp(1.25rem,2.5vw,2rem);display:grid;gap:var(--s1);align-content:start}
+.cell h3{font-size:var(--t-2)}
+.cell p{color:var(--muted)}
+.cell .btn{justify-self:start;margin-top:var(--s1)}
+.cell-main{grid-row:1/4;background:var(--accent-tint)}
+.cell-main .tags{margin-top:var(--s1)}
+.cell-main .tags li{background:var(--surface)}
+.cell-line{background:var(--surface);border:1px solid var(--line)}
+.cell-tint{background:var(--tint)}
+
+/* risultati spiegati */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--s6);align-items:center}
+.split .photo{aspect-ratio:4/5}
+.split h2{margin-bottom:var(--s3)}
+.points{display:grid;gap:var(--s3);margin-block:var(--s4)}
+.points li{display:flex;gap:var(--s2);align-items:flex-start}
+.points .ic{color:var(--accent);margin-top:.2rem}
+.points p{color:var(--muted);margin-top:.125rem}
+
+/* approfondimenti */
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.news a{display:grid;gap:var(--s2);text-decoration:none;align-content:start}
+.news .photo{aspect-ratio:3/2}
+.news time{font-size:var(--t-sm);color:var(--muted)}
+.news h3{transition:color .2s var(--ease)}
+.news a:hover h3{color:var(--accent-ink)}
+
+/* prenota e contatti */
+.book{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--s6);align-items:stretch}
+.book .photo{min-height:100%;aspect-ratio:auto}
+.book-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-box);padding:clamp(1.5rem,3vw,2.5rem);box-shadow:var(--shadow)}
+.book-panel h2{margin-bottom:var(--s2)}
+.book-panel .actions{margin-block:var(--s3) var(--s4)}
+.book-cols{align-items:start;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4)}
+.book-cols .hours{margin-top:0}
+
 /* barra mobile: contatto a un tocco, zona pollice */
 .dock{display:none}
 
@@ -217,11 +263,22 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
   .menu-btn{display:inline-flex}
 }
 @media (max-width:960px){
-  .hero-grid,.reviews,.prep,.about,.contact,.app{grid-template-columns:minmax(0,1fr)}
+  .hero-grid,.reviews,.prep,.about,.contact,.app,.split,.book,.bento,.news,.book-cols{grid-template-columns:minmax(0,1fr)}
+  .bento{grid-template-rows:none}
+  .cell-main{grid-row:auto}
+  .steps{grid-template-columns:minmax(0,1fr);gap:var(--s4)}
+  .steps::before{left:1.5rem;right:auto;top:1.5rem;bottom:1.5rem;width:2px;height:auto}
+  .steps li{padding-left:4.5rem}
+  .steps li::before{position:absolute;left:0;top:0}
+  .split .photo{aspect-ratio:4/3}
+  .book .photo{min-height:0;aspect-ratio:4/3}
+  .hero-fig .studio{position:static;width:auto;margin-top:var(--s2)}
+  .hero-fig .photo{aspect-ratio:4/3}
   .hero-grid{gap:var(--s5)}
   .tabs{flex-direction:row;overflow-x:auto;padding-bottom:var(--s1)}
   .tabs button{white-space:nowrap}
-  .rows{grid-template-columns:minmax(0,1fr)}
+  .pricing,.cols{grid-template-columns:minmax(0,1fr)}
+  .cols{gap:var(--s5);margin-top:var(--s5)}
   .defs>li{grid-template-columns:minmax(0,1fr) auto}
   .defs>li p{grid-column:1/-1;grid-row:2}
   .app .btn{justify-self:start}
@@ -235,8 +292,6 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
   .hero .lead{font-size:var(--t-0)}
   .actions .btn{flex:1 1 100%}
   .studio{padding:var(--s3)}
-  .rows li{align-items:flex-start;flex-direction:column;gap:var(--s1)}
-  .row-end{width:100%;justify-content:space-between}
   .dock{display:flex;gap:var(--s1);position:fixed;inset-inline:0;bottom:0;z-index:60;padding:var(--s1) var(--s2) calc(var(--s1) + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line)}
   .dock .btn{flex:1}
 }
@@ -288,30 +343,77 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
         <a class="btn btn-ghost" href="tel:051384747"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Chiama</a>
       </div>
     </div>
-    <aside class="studio" aria-labelledby="studio-t">
-      <h2 id="studio-t">Lo studio</h2>
-      <ul class="facts">
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><div><strong>Via Battindarno 8</strong>40133 Bologna</div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><div><strong>Lunedì - venerdì</strong>8:00 - 18:30<br>Sabato 8:00 - 11:30</div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><strong>Studio</strong><a href="tel:051384747">051 38 47 47</a></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg><div><strong>Cellulare e WhatsApp</strong><a href="tel:3402166135">340 2166135</a></div></li>
-      </ul>
-    </aside>
+    <div class="hero-fig">
+      <img class="photo" src="img/hero.webp" width="1500" height="1001" alt="Medico che esegue un'ecografia addominale a una paziente sdraiata, accanto all'ecografo" fetchpriority="high">
+      <aside class="studio" aria-labelledby="studio-t">
+        <h2 id="studio-t">Lo studio</h2>
+        <ul class="facts">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><div><strong>Via Battindarno 8</strong>40133 Bologna</div></li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><div><strong>Lun-ven 8:00 - 18:30</strong>Sabato 8:00 - 11:30</div></li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><a href="tel:051384747">051 38 47 47</a></div></li>
+        </ul>
+      </aside>
+    </div>
   </div>
 </section>
 
-<section class="sec sec-tint" id="servizi">
+<section class="sec sec-tint" id="come-funziona">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come funziona</h2>
+      <p class="lead">Dalla prenotazione al risultato, in tre passi.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Prenoti online</h3><p>Scegli giorno e ora sull'agenda o dall'App, a qualsiasi ora. Ricevi conferma e promemoria via email.</p></li>
+      <li><h3>Ti prepari</h3><p>Per alcune ecografie servono digiuno o vescica piena. Le indicazioni sono nella sezione preparazione.</p></li>
+      <li><h3>Fai l'esame</h3><p>Il dottore esegue l'ecografia e ti illustra l'esito. Si paga in studio, in contanti o con POS.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="servizi">
   <div class="wrap">
     <div class="sec-head">
       <h2>Cosa facciamo</h2>
       <p class="lead">Diagnostica per immagini e dietologia, con prenotazione online 24 ore su 24.</p>
     </div>
-    <ul class="defs">
-      <li><h3>Ecografie</h3><p>Addome, tiroide e capo collo, mammella, muscoli e articolazioni, scroto e parti molli.</p><a class="btn btn-quiet" href="#tariffe">Vedi le tariffe</a></li>
-      <li><h3>Ecocolordoppler</h3><p>Indagine vascolare: carotidi e vertebrali, vasi addominali, arterie renali, scroto, vene degli arti inferiori.</p><a class="btn btn-quiet" href="#t-doppler">Vedi le tariffe</a></li>
-      <li><h3>Ecografie a domicilio</h3><p>Nella tua abitazione, a Bologna e nei comuni limitrofi. Documentazione e risposta subito, via email o WhatsApp.</p><a class="btn btn-quiet" href="tel:3402166135">Chiama</a></li>
-      <li><h3>Dietologia</h3><p>Dieta personalizzata elaborata dal medico, in studio oppure a distanza, online.</p><a class="btn btn-quiet" href="#t-dieta">Vedi le tariffe</a></li>
-    </ul>
+    <div class="bento">
+      <div class="cell cell-main">
+        <h3>Ecografie</h3>
+        <p>In studio, con strumentazione all'avanguardia, per i distretti più richiesti.</p>
+        <ul class="tags"><li>Addome</li><li>Tiroide e capo collo</li><li>Mammella</li><li>Muscoli e tendini</li><li>Articolazioni</li><li>Scroto</li><li>Parti molli</li><li>Cute</li></ul>
+        <a class="btn btn-ghost" href="#tariffe">Vedi le tariffe</a>
+      </div>
+      <div class="cell cell-line">
+        <h3>Ecocolordoppler</h3>
+        <p>Indagine vascolare: carotidi e vertebrali, vasi addominali, arterie renali, scroto, vene degli arti inferiori.</p>
+      </div>
+      <div class="cell cell-tint">
+        <h3>A domicilio</h3>
+        <p>Nella tua abitazione, a Bologna e nei comuni limitrofi. Documentazione e risposta subito, via email o WhatsApp.</p>
+        <a class="btn btn-ghost" href="tel:3402166135"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Chiama</a>
+      </div>
+      <div class="cell cell-line">
+        <h3>Dietologia</h3>
+        <p>Dieta personalizzata elaborata dal medico, in studio oppure a distanza, online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="risultati">
+  <div class="wrap split">
+    <img class="photo" src="img/risultati.webp" width="900" height="1348" loading="lazy" alt="Mano di un medico che indica i dettagli di un'immagine ecografica sul monitor">
+    <div>
+      <h2>Ti spieghiamo l'esito dell'esame</h2>
+      <p class="lead">Chi ci sceglie lo dice spesso: gentilezza, disponibilità, spiegazioni chiare.</p>
+      <ul class="points">
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><div><h4>Il dottore illustra i risultati</h4><p>Alla fine dell'esame ti mostra cosa si vede e ti dà indicazioni.</p></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><div><h4>Ambiente sereno e privacy</h4><p>Uno studio medico privato, con la massima riservatezza.</p></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><div><h4>Promemoria prima della visita</h4><p>Conferma della prenotazione e promemoria via email, anche dall'App.</p></div></li>
+      </ul>
+      <a class="btn btn-ghost" href="#tariffe">Vedi le tariffe</a>
+    </div>
   </div>
 </section>
 
@@ -319,22 +421,9 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
   <div class="wrap">
     <div class="sec-head">
       <h2>Tariffe</h2>
-      <p class="lead">Il tariffario dello studio. Pagamenti in contanti e con POS in studio.</p>
+      <p class="lead">Quasi tutte le ecografie costano 70&nbsp;€. Pagamenti in contanti e con POS in studio.</p>
     </div>
-    <div class="tools">
-      <div class="filters" role="group" aria-label="Filtra per tipo di esame"><button class="chip" type="button" data-filter="all" aria-pressed="true">Tutte <span>(34)</span></button><button class="chip" type="button" data-filter="addome" aria-pressed="false">Addome e pelvi <span>(8)</span></button><button class="chip" type="button" data-filter="collo" aria-pressed="false">Capo, collo, seno e cute <span>(8)</span></button><button class="chip" type="button" data-filter="muscolo" aria-pressed="false">Muscolo-tendinea e articolare <span>(4)</span></button><button class="chip" type="button" data-filter="doppler" aria-pressed="false">Ecocolordoppler <span>(6)</span></button><button class="chip" type="button" data-filter="pacchetti" aria-pressed="false">Check-up, pacchetti e domicilio <span>(5)</span></button><button class="chip" type="button" data-filter="dieta" aria-pressed="false">Dietologia <span>(3)</span></button></div>
-      <div class="search"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-search"/></svg><input type="search" id="q" placeholder="Cerca un esame" aria-label="Cerca un esame"></div>
-    </div>
-    <div id="list">
-<section class="grp" data-cat="addome" id="t-addome"><h3>Addome e pelvi</h3><ul class="rows"><li data-q="ecografia addome completo fegato, vie biliari, pancreas, milza, reni, aorta, vescica e organi pelvici"><div><h4>Ecografia addome completo</h4><p>Fegato, vie biliari, pancreas, milza, reni, aorta, vescica e organi pelvici</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome completo">Prenota</a></div></li><li data-q="ecografia addome superiore reni, fegato, colecisti, pancreas, milza, aorta addominale"><div><h4>Ecografia addome superiore</h4><p>Reni, fegato, colecisti, pancreas, milza, aorta addominale</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome superiore">Prenota</a></div></li><li data-q="ecografia addome inferiore vescica, prostata, utero e ovaie"><div><h4>Ecografia addome inferiore</h4><p>Vescica, prostata, utero e ovaie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia addome inferiore">Prenota</a></div></li><li data-q="ecografia vie urinarie reni e surreni, ureteri, vescica"><div><h4>Ecografia vie urinarie</h4><p>Reni e surreni, ureteri, vescica</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia vie urinarie">Prenota</a></div></li><li data-q="ecografia pelvica ginecologica utero e ovaie"><div><h4>Ecografia pelvica ginecologica</h4><p>Utero e ovaie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia pelvica ginecologica">Prenota</a></div></li><li data-q="ecografia pelvica prostatica prostata"><div><h4>Ecografia pelvica prostatica</h4><p>Prostata</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia pelvica prostatica">Prenota</a></div></li><li data-q="ecografia anse intestinali studio delle anse intestinali"><div><h4>Ecografia anse intestinali</h4><p>Studio delle anse intestinali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia anse intestinali">Prenota</a></div></li><li data-q="ecografia scrotale e testicoli testicoli, varicocele, idrocele, ernie scrotali"><div><h4>Ecografia scrotale e testicoli</h4><p>Testicoli, varicocele, idrocele, ernie scrotali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia scrotale e testicoli">Prenota</a></div></li></ul></section>
-<section class="grp" data-cat="collo" id="t-collo"><h3>Capo, collo, seno e cute</h3><ul class="rows"><li data-q="ecografia capo collo tiroide e paratiroidi, ghiandole salivari, stazioni linfonodali"><div><h4>Ecografia capo collo</h4><p>Tiroide e paratiroidi, ghiandole salivari, stazioni linfonodali</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia capo collo">Prenota</a></div></li><li data-q="ecografia tiroide studio mirato della tiroide"><div><h4>Ecografia tiroide</h4><p>Studio mirato della tiroide</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia tiroide">Prenota</a></div></li><li data-q="ecografia ghiandole salivari parotidi e ghiandole sottomandibolari"><div><h4>Ecografia ghiandole salivari</h4><p>Parotidi e ghiandole sottomandibolari</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia ghiandole salivari">Prenota</a></div></li><li data-q="ecografia linfonodi, un tratto stazioni linfonodali di un distretto"><div><h4>Ecografia linfonodi, un tratto</h4><p>Stazioni linfonodali di un distretto</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia linfonodi, un tratto">Prenota</a></div></li><li data-q="ecografia linfonodi, due tratti stazioni linfonodali di due distretti"><div><h4>Ecografia linfonodi, due tratti</h4><p>Stazioni linfonodali di due distretti</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia linfonodi, due tratti">Prenota</a></div></li><li data-q="ecografia mammaria mammelle e cavi ascellari, anche a scopo preventivo"><div><h4>Ecografia mammaria</h4><p>Mammelle e cavi ascellari, anche a scopo preventivo</p></div><div class="row-end"><span class="price">75 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia mammaria">Prenota</a></div></li><li data-q="ecografia parti molli masse palpabili sotto il piano cutaneo"><div><h4>Ecografia parti molli</h4><p>Masse palpabili sotto il piano cutaneo</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia parti molli">Prenota</a></div></li><li data-q="ecografia cute e sottocute studio di cute e tessuto sottocutaneo"><div><h4>Ecografia cute e sottocute</h4><p>Studio di cute e tessuto sottocutaneo</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia cute e sottocute">Prenota</a></div></li></ul></section>
-<section class="grp" data-cat="muscolo" id="t-muscolo"><h3>Muscolo-tendinea e articolare</h3><ul class="rows"><li data-q="ecografia muscolo tendinea, un tratto dolori muscolari e tendinei"><div><h4>Ecografia muscolo tendinea, un tratto</h4><p>Dolori muscolari e tendinei</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia muscolo tendinea, un tratto">Prenota</a></div></li><li data-q="ecografia muscolo tendinea, due tratti due distretti muscolo-tendinei"><div><h4>Ecografia muscolo tendinea, due tratti</h4><p>Due distretti muscolo-tendinei</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia muscolo tendinea, due tratti">Prenota</a></div></li><li data-q="ecografia osteoarticolare, un tratto mani e polsi, ginocchia, spalle, gomiti, piedi e caviglie"><div><h4>Ecografia osteoarticolare, un tratto</h4><p>Mani e polsi, ginocchia, spalle, gomiti, piedi e caviglie</p></div><div class="row-end"><span class="price">70 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia osteoarticolare, un tratto">Prenota</a></div></li><li data-q="ecografia osteoarticolare, due tratti due distretti articolari"><div><h4>Ecografia osteoarticolare, due tratti</h4><p>Due distretti articolari</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecografia osteoarticolare, due tratti">Prenota</a></div></li></ul></section>
-<section class="grp" data-cat="doppler" id="t-doppler"><h3>Ecocolordoppler</h3><ul class="rows"><li data-q="ecocolordoppler tsa carotidi e vertebrali"><div><h4>Ecocolordoppler TSA</h4><p>Carotidi e vertebrali</p></div><div class="row-end"><span class="price">85 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler TSA">Prenota</a></div></li><li data-q="ecocolordoppler vasi addominali aorta, renali, iliache, mesenterica superiore"><div><h4>Ecocolordoppler vasi addominali</h4><p>Aorta, renali, iliache, mesenterica superiore</p></div><div class="row-end"><span class="price">90 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler vasi addominali">Prenota</a></div></li><li data-q="ecocolordoppler arterie renali flusso delle arterie renali"><div><h4>Ecocolordoppler arterie renali</h4><p>Flusso delle arterie renali</p></div><div class="row-end"><span class="price">85 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler arterie renali">Prenota</a></div></li><li data-q="ecocolordoppler scrotale studio vascolare dello scroto, varicocele"><div><h4>Ecocolordoppler scrotale</h4><p>Studio vascolare dello scroto, varicocele</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler scrotale">Prenota</a></div></li><li data-q="ecocolordoppler venoso arti inferiori insufficienza venosa e ricerca di trombi, entrambi gli arti"><div><h4>Ecocolordoppler venoso arti inferiori</h4><p>Insufficienza venosa e ricerca di trombi, entrambi gli arti</p></div><div class="row-end"><span class="price">110 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler venoso arti inferiori">Prenota</a></div></li><li data-q="ecocolordoppler venoso, singolo arto inferiore un solo arto inferiore"><div><h4>Ecocolordoppler venoso, singolo arto inferiore</h4><p>Un solo arto inferiore</p></div><div class="row-end"><span class="price">80 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Ecocolordoppler venoso, singolo arto inferiore">Prenota</a></div></li></ul></section>
-<section class="grp" data-cat="pacchetti" id="t-pacchetti"><h3>Check-up, pacchetti e domicilio</h3><ul class="rows"><li data-q="check-up prevenzione base due esami a scelta dal tariffario"><div><h4>Check-up prevenzione base</h4><p>Due esami a scelta dal tariffario</p></div><div class="row-end"><span class="price">110 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Check-up prevenzione base">Prenota</a></div></li><li data-q="check-up prevenzione avanzata tre esami a scelta dal tariffario"><div><h4>Check-up prevenzione avanzata</h4><p>Tre esami a scelta dal tariffario</p></div><div class="row-end"><span class="price">155 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Check-up prevenzione avanzata">Prenota</a></div></li><li data-q="pacchetto ecografico 3 esami 3 crediti validi 3 anni, 51,70 € a esame"><div><h4>Pacchetto ecografico 3 esami</h4><p>3 crediti validi 3 anni, 51,70 € a esame</p></div><div class="row-end"><span class="price">155 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Pacchetto ecografico 3 esami">Prenota</a></div></li><li data-q="pacchetto ecografico 5 esami 5 crediti validi 3 anni, 42 € a esame"><div><h4>Pacchetto ecografico 5 esami</h4><p>5 crediti validi 3 anni, 42 € a esame</p></div><div class="row-end"><span class="price">210 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Pacchetto ecografico 5 esami">Prenota</a></div></li><li data-q="ecografia a domicilio bologna e comuni limitrofi. 30 € per ogni esame aggiuntivo, 6 € in più in ztl"><div><h4>Ecografia a domicilio</h4><p>Bologna e comuni limitrofi. 30 € per ogni esame aggiuntivo, 6 € in più in ZTL</p></div><div class="row-end"><span class="price">150 €</span><a class="btn btn-quiet" href="tel:3402166135" aria-label="Chiama per Ecografia a domicilio">Chiama</a></div></li></ul></section>
-<section class="grp" data-cat="dieta" id="t-dieta"><h3>Dietologia</h3><ul class="rows"><li data-q="visita dietologica visita medica e dieta personalizzata, in studio o online"><div><h4>Visita dietologica</h4><p>Visita medica e dieta personalizzata, in studio o online</p></div><div class="row-end"><span class="price">100 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Visita dietologica">Prenota</a></div></li><li data-q="visita dietologica con ecografia addome superiore e tiroide visita completa con le due ecografie"><div><h4>Visita dietologica con ecografia addome superiore e tiroide</h4><p>Visita completa con le due ecografie</p></div><div class="row-end"><span class="price">170 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Visita dietologica con ecografia addome superiore e tiroide">Prenota</a></div></li><li data-q="controllo dieta controllo di follow-up"><div><h4>Controllo dieta</h4><p>Controllo di follow-up</p></div><div class="row-end"><span class="price">30 €</span><a class="btn btn-quiet" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener" aria-label="Prenota Controllo dieta">Prenota</a></div></li></ul></section>
-    </div>
-    <p class="empty" id="empty" role="status">Nessun esame trovato. Prova con un'altra parola o chiama lo studio.</p>
-    <p class="small note">L'ecografia a domicilio si prenota per telefono o email. Le prenotazioni online si possono modificare o annullare nei due giorni prima dell'esame; il giorno stesso chiama lo studio.</p>
+<div class="pricing"><div class="tier"><p class="tier-price">70 €</p><h3>La maggior parte delle ecografie</h3><ul class="tags"><li>Addome superiore</li><li>Addome inferiore</li><li>Vie urinarie</li><li>Pelvica ginecologica</li><li>Pelvica prostatica</li><li>Anse intestinali</li><li>Scrotale e testicoli</li><li>Capo collo</li><li>Tiroide</li><li>Ghiandole salivari</li><li>Linfonodi (uno o due tratti)</li><li>Parti molli</li><li>Cute e sottocute</li><li>Muscolo tendinea (un tratto)</li><li>Osteoarticolare (un tratto)</li></ul></div><div class="others"><h3>Altre ecografie</h3><ul class="plist"><li><span>Addome completo</span><b>80 €</b></li><li><span>Mammaria</span><b>75 €</b></li><li><span>Muscolo tendinea, due tratti</span><b>90 €</b></li><li><span>Osteoarticolare, due tratti</span><b>90 €</b></li></ul><h3>A domicilio</h3><ul class="plist"><li><span>Ecografia a domicilio</span><b>150 €</b></li></ul><p class="small">Bologna e comuni limitrofi. 30 € per ogni esame aggiuntivo, 6 € in più in ZTL. Si prenota per telefono o email.</p></div></div><div class="cols"><div id="t-doppler"><h3>Ecocolordoppler</h3><ul class="plist"><li><span>TSA, carotidi e vertebrali</span><b>85 €</b></li><li><span>Vasi addominali</span><b>90 €</b></li><li><span>Arterie renali</span><b>85 €</b></li><li><span>Scrotale</span><b>80 €</b></li><li><span>Venoso arti inferiori</span><b>110 €</b></li><li><span>Venoso, singolo arto</span><b>80 €</b></li></ul></div><div><h3>Check-up e pacchetti</h3><ul class="plist"><li><span>Check-up base, 2 esami a scelta</span><b>110 €</b></li><li><span>Check-up avanzata, 3 esami a scelta</span><b>155 €</b></li><li><span>Pacchetto 3 esami</span><b>155 €</b></li><li><span>Pacchetto 5 esami</span><b>210 €</b></li></ul><p class="small">I pacchetti sono crediti validi 3 anni: ogni credito vale un esame del tariffario, esclusi check-up e domicilio. Costo per esame: 51,70 € con 3 crediti, 42 € con 5.</p></div><div id="t-dieta"><h3>Dietologia</h3><ul class="plist"><li><span>Visita dietologica</span><b>100 €</b></li><li><span>Visita con ecografia addome superiore e tiroide</span><b>170 €</b></li><li><span>Controllo dieta</span><b>30 €</b></li></ul></div></div>    <p class="small note">Le prenotazioni online si possono modificare o annullare nei due giorni prima dell'esame; il giorno stesso chiama lo studio.</p>
   </div>
 </section>
 
@@ -390,28 +479,46 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
   </div>
 </section>
 
-<section class="sec" id="contatti">
-  <div class="wrap contact">
-    <div>
-      <h2 style="margin-bottom:var(--s3)">Dove siamo</h2>
-      <ul class="facts">
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><strong>Studio</strong><a href="tel:051384747">051 38 47 47</a></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg><div><strong>Cellulare e WhatsApp</strong><a href="tel:3402166135">340 2166135</a>, <a href="https://wa.me/393402166135?text=Salve%20Dott.%20Tarozzi%2C%20vorrei%20prenotare%20un%20esame%20ecografico" target="_blank" rel="noopener">scrivi su WhatsApp</a></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><div><strong>Email</strong><a href="mailto:studiomedicotarozzi@gmail.com">studiomedicotarozzi@gmail.com</a></div></li>
-      </ul>
-      <table class="hours">
-        <caption class="small" style="text-align:left;padding-top:var(--s3)">Orari di apertura</caption>
-        <tbody>
-          <tr><th scope="row">Lunedì - venerdì</th><td>8:00 - 18:30</td></tr>
-          <tr><th scope="row">Sabato</th><td>8:00 - 11:30</td></tr>
-          <tr><th scope="row">Domenica</th><td>Chiuso</td></tr>
-        </tbody>
-      </table>
+<section class="sec" id="approfondimenti">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Approfondimenti</h2>
+      <p class="lead">Articoli dal sito dello studio sulle ecografie più richieste.</p>
     </div>
-    <div class="where">
-      <h3>Studio medico</h3>
-      <address>Via Battindarno 8<br>40133 Bologna (BO)</address>
-      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Via+Battindarno+8%2C+40133+Bologna" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg> Apri in Google Maps</a>
+    <div class="news">
+      <a href="https://www.ecografiabologna-tarozzi.it/ecografia-muscolo-tendinea-a-bologna" target="_blank" rel="noopener"><img class="photo" src="https://www.ecografiabologna-tarozzi.it/wp-content/uploads/2017/06/muscolo-tendinea-1-400x400.jpg" width="400" height="400" loading="lazy" alt="Immagine ecografica di un tendine della spalla"><div><time datetime="2025-01-08">8 gennaio 2025</time><h3>Ecografia muscolo tendinea a Bologna</h3></div></a>
+      <a href="https://www.ecografiabologna-tarozzi.it/ecografia-addome-completo" target="_blank" rel="noopener"><img class="photo" src="https://www.ecografiabologna-tarozzi.it/wp-content/uploads/2017/06/Ecografia-Addome-Completo-400x400.png" width="400" height="400" loading="lazy" alt="Immagine ecografica di un rene"><div><time datetime="2024-12-11">11 dicembre 2024</time><h3>Ecografia addome completo a Bologna</h3></div></a>
+      <a href="https://www.ecografiabologna-tarozzi.it/ecografia-allo-scroto-ai-testicoli-bologna" target="_blank" rel="noopener"><img class="photo" src="https://www.ecografiabologna-tarozzi.it/wp-content/uploads/2018/02/Testicoli-ed-Epididimi-400x400.jpg" width="400" height="400" loading="lazy" alt="Disegno anatomico di testicolo ed epididimo"><div><time datetime="2018-02-01">1 febbraio 2018</time><h3>Ecografia allo scroto e ai testicoli a Bologna</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tint" id="contatti">
+  <div class="wrap book">
+    <img class="photo" src="img/studio.webp" width="900" height="1350" loading="lazy" alt="Medico in camice bianco seduto accanto a un ecografo, mentre rivede un referto">
+    <div class="book-panel">
+      <h2>Prenota la tua ecografia</h2>
+      <p class="lead">Online a qualsiasi ora, oppure chiama lo studio.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.ecografiabologna-tarozzi.it/prenotazione-ecografia-bologna" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-calendar-check"/></svg> Prenota</a>
+        <a class="btn btn-ghost" href="tel:051384747"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Chiama</a>
+      </div>
+      <div class="book-cols">
+        <ul class="facts">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><div><strong>Via Battindarno 8</strong>40133 Bologna (BO)<br><a href="https://www.google.com/maps/search/?api=1&query=Via+Battindarno+8%2C+40133+Bologna" target="_blank" rel="noopener">Apri in Google Maps</a></div></li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><div><strong>Studio</strong><a href="tel:051384747">051 38 47 47</a></div></li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg><div><strong>Cellulare e WhatsApp</strong><a href="tel:3402166135">340 2166135</a>, <a href="https://wa.me/393402166135?text=Salve%20Dott.%20Tarozzi%2C%20vorrei%20prenotare%20un%20esame%20ecografico" target="_blank" rel="noopener">scrivi su WhatsApp</a></div></li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><div><strong>Email</strong><a href="mailto:studiomedicotarozzi@gmail.com">studiomedicotarozzi@gmail.com</a></div></li>
+        </ul>
+        <table class="hours">
+          <caption class="small" style="text-align:left;padding-bottom:var(--s1)">Orari di apertura</caption>
+          <tbody>
+            <tr><th scope="row">Lunedì - venerdì</th><td>8:00 - 18:30</td></tr>
+            <tr><th scope="row">Sabato</th><td>8:00 - 11:30</td></tr>
+            <tr><th scope="row">Domenica</th><td>Chiuso</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -424,7 +531,7 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
       <div><h2>Dati professionali</h2><p>Ordine dei Medici di Bologna n° 13066<br>Registro Nazionale Medici Ecografisti SIUMB<br>P.IVA 04232980377</p></div>
       <div><h2>Contatti</h2><p>Via Battindarno 8, 40133 Bologna<br>051 38 47 47, 340 2166135<br>studiomedicotarozzi@gmail.com</p><p><a href="https://www.ecografiabologna-tarozzi.it/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>, <a href="https://www.ecografiabologna-tarozzi.it/informativa-cookie" target="_blank" rel="noopener">Informativa Cookie</a></p></div>
     </div>
-    <p class="legal">Proposta di restyling realizzata da MadHat Works. Non è il sito ufficiale dello studio. Testi, tariffe e recensioni provengono da ecografiabologna-tarozzi.it.</p>
+    <p class="legal">Proposta di restyling realizzata da MadHat Works. Non è il sito ufficiale dello studio. Testi, tariffe, recensioni e immagini degli approfondimenti provengono da ecografiabologna-tarozzi.it. Le altre foto sono di Pexels, a scopo illustrativo: non ritraggono lo studio né il dottore.</p>
   </div>
 </footer>
 
@@ -440,29 +547,6 @@ h4{font-size:var(--t-0);font-weight:600;line-height:1.35}
   menuBtn.addEventListener('click',function(){setMenu(!drawer.classList.contains('open'))});
   drawer.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
-
-  /* tariffe: filtro e ricerca */
-  var chips=[].slice.call(document.querySelectorAll('.chip')),grps=[].slice.call(document.querySelectorAll('.grp')),q=document.getElementById('q'),empty=document.getElementById('empty'),cat='all';
-  function render(){
-    var term=q.value.toLowerCase().trim(),shown=0;
-    grps.forEach(function(g){
-      var any=0;
-      [].forEach.call(g.querySelectorAll('li'),function(li){
-        var ok=(cat==='all'||g.dataset.cat===cat)&&(!term||li.dataset.q.indexOf(term)>-1);
-        li.hidden=!ok;if(ok)any++;
-      });
-      g.hidden=!any;shown+=any;
-    });
-    empty.classList.toggle('show',!shown);
-  }
-  chips.forEach(function(c){c.addEventListener('click',function(){
-    chips.forEach(function(x){x.setAttribute('aria-pressed','false')});
-    c.setAttribute('aria-pressed','true');cat=c.dataset.filter;render();
-  })});
-  q.addEventListener('input',render);
-  document.querySelectorAll('a[href^="#t-"]').forEach(function(a){a.addEventListener('click',function(){
-    var k=a.getAttribute('href').slice(3);var c=document.querySelector('.chip[data-filter="'+k+'"]');if(c)c.click();
-  })});
 
   /* preparazione: schede */
   var tabs=[].slice.call(document.querySelectorAll('[role=tab]')),panels=[].slice.call(document.querySelectorAll('.panel'));
